@@ -28,16 +28,17 @@ This project is a standard Java application and requires a Java Development Kit 
 Ensure your files are arranged in the following package structure:
 
 src/
-├── App/
-│   └── CAPRSApp.java
-├── clinic_data/
-│   ├── Patient.java
-│   ├── Doctor.java
-│   └── Appointment.java
-└── clinic_logic/
-    ├── ClinicManager.java
-    ├── FileHandler.java
-    └── CustomExceptions.java
+- App/
+ 1.  CAPRSApp.java
+-  clinic_data/
+    1. Patient.java
+    2. Doctor.java
+    3. Appointment.java
+- clinic_logic/
+   1.  ClinicManager.java
+   2. FileHandler.java
+   3. CustomExceptions.java
+
 - Step 1: Compile the Java Files : Navigate to the source directory (src/) in your terminal and compile all the Java file 
 Example compilation command (adjust based on your IDE/build tool)
 javac App/*.java clinic_data/*.java clinic_logic/*.java -d classes
@@ -51,15 +52,15 @@ Once the application is running, you will be presented with the main menu.
 - Start-up: The system automatically loads existing data from *.ser files and initializes with a few sample patients and doctors (hardcoded in CAPRSApp.java).
 - Navigation: Enter the number corresponding to your desired menu option (1, 2, or 3) and press Enter.
 - Scheduling Appointments:
-   - Select 3. Appointment Scheduling.
-   - Choose 1. Schedule New Appointment : You will be prompted to enter the Patient ID, Doctor ID, Date (dd-MM-yyyy), and Time (HH:mm).
-   - The system will check for doctor availability and confirm the booking.
-   - Exit: Select 0. Exit and Save to close the program. This will trigger the ClinicManager.saveData() method, writing all current records (patients, doctors, appointments) back to the .ser files for persistence.
+  1. Select 3. Appointment Scheduling.
+  2. Choose 1. Schedule New Appointment : You will be prompted to enter the Patient ID, Doctor ID, Date (dd-MM-yyyy), and Time (HH:mm).
+  3. The system will check for doctor availability and confirm the booking.
+  4. Exit: Select 0. Exit and Save to close the program. This will trigger the ClinicManager.saveData() method, writing all current records (patients, doctors, appointments) back to the .ser files for persistence.
 
 ## Code Architecture Overview 
 The system is split into two logical package layers:
 
 - Package	Purpose	Key Classes
-   - clinic_data	Data Model: Simple Java objects representing core entities.	Patient, Doctor, Appointment
-   - clinic_logic	Business Logic: Handles data loading, saving, and all core operations.	ClinicManager, FileHandler, CustomExceptions
+   1. clinic_data	Data Model: Simple Java objects representing core entities.	Patient, Doctor, Appointment
+   2. clinic_logic	Business Logic: Handles data loading, saving, and all core operations.	ClinicManager, FileHandler, CustomExceptions
   
